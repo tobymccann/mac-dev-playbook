@@ -1,6 +1,6 @@
 # Mac Development Ansible Playbook
 
-[![Build Status](https://travis-ci.org/geerlingguy/mac-dev-playbook.svg?branch=master)](https://travis-ci.org/geerlingguy/mac-dev-playbook)
+[![Build Status](https://travis-ci.org/tobymccann/mac-dev-playbook.svg?branch=master)](https://travis-ci.org/tobymccann/mac-dev-playbook)
 
 This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have some manual installation steps, but at least it's all documented here.
 
@@ -8,8 +8,6 @@ This is a work in progress, and is mostly a means for me to document my current 
 
 *See also*:
 
-  - [Boxen](https://github.com/boxen)
-  - [Battleschool](http://spencer.gibb.us/blog/2014/02/03/introducing-battleschool)
   - [osxc](https://github.com/osxc)
   - [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks) (the original inspiration for this project)
 
@@ -49,23 +47,14 @@ Applications (installed with Homebrew Cask):
   - [Docker](https://www.docker.com/)
   - [Dropbox](https://www.dropbox.com/)
   - [Fing](https://www.fing.io/)
-  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
   - [Google Chrome](https://www.google.com/chrome/)
   - [Handbrake](https://handbrake.fr/)
-  - [HipChat](https://www.hipchat.com/)
   - [Homebrew](http://brew.sh/)
   - [Java](https://java.com)
-  - [KDiff3](http://kdiff3.sourceforge.net/)
-  - [LICEcap](http://www.cockos.com/licecap/)
-  - [LimeChat](http://limechat.net/mac/)
   - [MacVim](http://macvim-dev.github.io/macvim/)
   - [Menu Meters](https://www.ragingmenace.com/software/menumeters/) (Note: Currently using [this fork](http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/) for compatibility)
-  - [nvALT](http://brettterpstra.com/projects/nvalt/)
   - [Sequel Pro](https://www.sequelpro.com/) (MySQL client)
-  - [Skype](https://www.skype.com/en/)
-  - [Skitch](https://evernote.com/skitch/)
   - [Slack](https://slack.com/)
-  - [Sublime Text](https://www.sublimetext.com/)
   - [Transmit](https://panic.com/transmit/) (S/FTP client)
   - [Vagrant](https://www.vagrantup.com/)
   - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
@@ -73,12 +62,14 @@ Applications (installed with Homebrew Cask):
 
 Packages (installed with Homebrew):
 
+  - atom
   - autoconf
   - bash-completion
-  - chromedriver
-  - doxygen
+  - findutils
+  - goeip
   - gettext
   - git
+  - gnutls
   - go
   - gpg
   - hub
@@ -106,7 +97,7 @@ Packages (installed with Homebrew):
   - wget
   - wrk
 
-My [dotfiles](https://github.com/geerlingguy/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use.
+My [dotfiles](https://gitlab.com/jkennemer/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use.
 
 Finally, there are a few other preferences and settings added on for various apps and services.
 
@@ -145,9 +136,9 @@ These are mostly direct download links, some are more difficult to install becau
 
 ## Testing the Playbook
 
-Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
+Don't test on your own Macbook! Instead, follow these instructions from Jeff Geerling on how to build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm). Continually run and re-run this playbook to test changes and make sure things work correctly.
 
-Additionally, this project is [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/geerlingguy/mac-dev-playbook).
+Additionally, this project is [continuously tested on Travis CI's macOS infrastructure](https://travis-ci.org/tobymccann/mac-dev-playbook).
 
 ## Ansible for DevOps
 
@@ -155,4 +146,4 @@ Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches
 
 ## Author
 
-[Jeff Geerling](http://www.jeffgeerling.com/), 2014 (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
+[Jason Kennemer](http://www.jasonkennemer.com/), 2017 (originally inspired by [Jeff Geerling:geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)[MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).

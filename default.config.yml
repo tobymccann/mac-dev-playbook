@@ -3,92 +3,46 @@ downloads: ~/.ansible-downloads/
 
 configure_sudoers: yes
 configure_terminal: yes
-configure_osx: yes
+configure_macos: yes
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://gitlab.com/jkennemer/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Projects/dotfiles
 dotfiles_files:
+  - .aliases
   - .bash_profile
+  - .bash_prompt
+  - .bashrc
+  - .curlrc
+  - .editorconfig
+  - .exports
+  - .functions
+  - .gitattributes
   - .gitconfig
   - .gitignore
   - .inputrc
-  - .osx
+  - .macos
+  - .screenrc
+  - .tmux.conf
   - .vimrc
+  - .wgetrc
+  - .zshrc
+  - Brewfile
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - chromedriver
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - go
-  - gpg
-  - hub
-  - httpie
-  - iperf
-  - libdvdcss
-  - libevent
-  - packer
-  - python
-  - sqlite
-  - mcrypt
-  - mysql
-  - nmap
-  - npm
-  - nvm
-  - php70
-  - php70-mcrypt
-  - php70-xdebug
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - subversion
-  - openssl
-  - pv
-  - drush
-  - wget
-  - wrk
+
 
 homebrew_taps:
   - homebrew/core
-  - caskroom/cask
-  - homebrew/binary
-  - homebrew/dupes
-  - homebrew/php
-  - homebrew/versions
+  - homebrew/bundle
+
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - docker
-  - dropbox
-  # - fing # Download link keeps getting changed, d'oh!
-  - firefox
-  - google-chrome
-  - handbrake
-  - hipchat
-  - java
-  - kdiff3
-  - licecap
-  - limechat
-  - macvim
-  # - menumeters
-  # - yujitach-menumeters # Forked version for 10.11+ support.
-  - nvalt
-  - sequel-pro
-  - skype
-  - skitch
-  - slack
-  - sublime-text
-  - transmit
-  - vagrant
-  - virtualbox
-  - vlc
 
-# See `geerlingguy.mas` role documentation for usage instructions.
+
+# See `tobymccann.mas` role documentation for usage instructions.
 mas_installed_app_ids: []
 mas_email: ""
 mas_password: ""

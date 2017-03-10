@@ -3,3 +3,8 @@
 *.retry
 roles*
 config.yml
+.idea/inspectionProfiles/
+.idea/mac-dev-playbook.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
